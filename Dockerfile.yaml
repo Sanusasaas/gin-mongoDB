@@ -1,0 +1,19 @@
+FROM golang
+
+WORKDIR /app
+
+COPY go.mod go.sum ./
+
+RUN go mod download
+
+COPY . .
+
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app/myapp ./...
+
+FROM alpine:latest
+
+COPY --from=builder /app/myapp .
+
+EXPOSE 9000
+
+CMD ["./myapp"]
