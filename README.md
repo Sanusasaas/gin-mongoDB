@@ -18,7 +18,9 @@
 2. Клонируй репозиторий и перейди в папку: \
     git clone https://github.com/Sanusasaas/gin-mongoDB \
     cd gin-proj
-3. Запусти проект:
+3. Перейти в корневую папку проекта:
+    cd gin-mongoDB 
+4. Запусти проект:
     docker-compose up --build
 Приложение будет доступно на http://localhost:9000
 
@@ -35,16 +37,17 @@
 [DELETE]  /cars/delete/:car_id          Удаление машины из базы данных (доступно админу)
 
 ## Пример запроса на регистрацию:
+```bash
 curl -X POST http://localhost:9000/users/signup \
   -H "Content-Type: application/json" \
   -d '{
-    "Name": "User", \
-    "Phone": "89648883244", \
-    "Email": "user@gmail.com", \
-    "Password": "password123", \
-    "User_type": "USER" \
+    "name": "User",
+    "phone": "89648883244",
+    "email": "user@gmail.com",
+    "password": "password123",
+    "user_type": "USER"
   }'
-
+```
 ## Зависимости
 
 Gin — веб-фреймворк. (https://github.com/gin-gonic/gin) \
