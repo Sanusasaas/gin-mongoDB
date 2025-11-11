@@ -57,6 +57,25 @@ curl -X POST http://localhost:9000/user/login \
     "password": "password123"
   }'
 ```
+
+## Пример запроса на получение списка пользователей:
+```bash
+curl -X POST http://localhost:9000/users \
+  -H "token:ваш токен" \
+```
+
+## Пример запроса на добавление машины:
+```bash
+curl -X POST http://localhost:9000/cars/create \
+  -H "token:ваш токен" \
+  -d '{
+    "Brand": "Toyota",
+    "Model": "Supra",
+    "Year": 2018,
+    "Price": 7000
+  }'
+```
+
 ## Зависимости
 
 Gin — веб-фреймворк. (https://github.com/gin-gonic/gin) \
