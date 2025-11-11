@@ -17,11 +17,10 @@
 1. Установи Docker и Docker Compose. (https://docs.docker.com/get-docker/) (https://docs.docker.com/compose/install/)
 2. Клонируй репозиторий и перейди в папку: \
     git clone https://github.com/Sanusasaas/gin-mongoDB \
-    cd gin-proj
-3. Перейти в корневую папку проекта:
+3. Перейти в корневую папку проекта: \
     cd gin-mongoDB 
-4. Запусти проект:
-    docker-compose up --build
+4. Запусти проект: \
+    docker-compose up --build \
 Приложение будет доступно на http://localhost:9000
 
 ## 🚀  API Эндпоинты
@@ -41,11 +40,21 @@
 curl -X POST http://localhost:9000/users/signup \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "User",
-    "phone": "89648883244",
-    "email": "user@gmail.com",
+    "name": "Admin",
+    "phone": "89648883254",
+    "email": "admin@gmail.com",
     "password": "password123",
-    "user_type": "USER"
+    "user_type": "ADMIN"
+  }'
+```
+
+## Пример запроса на авторизацию:
+```bash
+curl -X POST http://localhost:9000/user/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "admin@gmail.com",
+    "password": "password123"
   }'
 ```
 ## Зависимости
