@@ -16,7 +16,7 @@
 
 1. Установи Docker и Docker Compose. (https://docs.docker.com/get-docker/) (https://docs.docker.com/compose/install/)
 2. Клонируй репозиторий и перейди в папку: \
-    git clone https://github.com/Sanusasaas/gin-mongoDB \
+    git clone https://github.com/Sanusasaas/gin-mongoDB
 3. Перейти в корневую папку проекта: \
     cd gin-mongoDB 
 4. Запусти проект: \
