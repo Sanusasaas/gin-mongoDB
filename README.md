@@ -61,7 +61,7 @@ curl -X POST http://localhost:9000/user/login \
 ## Пример запроса на получение списка пользователей:
 ```bash
 curl -X POST http://localhost:9000/users \
-  -H "token:ваш токен" \
+  -H "token:ваш токен"
 ```
 
 ## Пример запроса на добавление машины:
